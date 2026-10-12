@@ -6,18 +6,6 @@ import CrearVenta from "./components/CrearVenta";
 function App() {
   return (
     <>
-      <nav
-        style={{
-          display: "flex",
-          gap: "1rem",
-          justifyContent: "center",
-          padding: "1rem",
-        }}
-      >
-        <Link to="/ventas">Registrar venta</Link>
-        <Link to="/comisiones">Comisiones</Link>
-      </nav>
-
       <Routes>
         <Route path="/" element={<Navigate to="/ventas" replace />} />
         <Route path="/ventas" element={<CrearVenta />} />
