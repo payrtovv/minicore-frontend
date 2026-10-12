@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import Comisiones from "./components/comisiones";
+import Comisiones from "./components/Comisiones";
 import CrearVenta from "./components/CrearVenta";
 function App() {
   return (
