@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { API } from "./api";
+import { API } from "../api";
 
 export default function CrearVenta() {
   const [vendedores, setVendedores] = useState([]);
