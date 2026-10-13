@@ -64,7 +64,7 @@ Se aplica un único porcentaje según el total vendido por el vendedor en el ran
 
 Las reglas están en `commissions/services.py` (`COMMISSION_TIERS`).
 
-## Despliegue
+# Despliegue
 
 ## Backend en Render
 
@@ -79,6 +79,10 @@ La creación y administración de vendedores se realiza directamente a través d
    * **Contraseña:** `Pv18273645.`
 3. Ve a la sección de **Vendedores** y haz clic en **Añadir / Add**.
 4. Completa los datos requeridos y guarda los cambios.
+
+## Front en netlify
+
+Deploy: https://wonderful-puffpuff-6f8513.netlify.app/
 
 ## Instalación y ejecución (local)
 
