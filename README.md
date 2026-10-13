@@ -64,6 +64,22 @@ Se aplica un único porcentaje según el total vendido por el vendedor en el ran
 
 Las reglas están en `commissions/services.py` (`COMMISSION_TIERS`).
 
+## Despliegue
+
+## Backend en Render
+
+### Gestión de Vendedores
+
+La creación y administración de vendedores se realiza directamente a través del panel de administración de Django (**Django Admin**).
+
+1. Accede al panel de administración desde tu navegador:
+   * **URL:** https://minicore-api-gch3.onrender.com/admin/
+2. Inicia sesión con las credenciales de superusuario:
+   * **Usuario:** `admin`
+   * **Contraseña:** `Pv18273645.`
+3. Ve a la sección de **Vendedores** y haz clic en **Añadir / Add**.
+4. Completa los datos requeridos y guarda los cambios.
+
 ## Instalación y ejecución (local)
 
 ### Requisitos previos
@@ -109,24 +125,6 @@ El frontend queda disponible en `http://localhost:5173/`. Rutas:
 
 - `/ventas`: registrar una venta
 - `/comisiones`: consultar comisiones por rango de fechas
-
-
-
-### Despliegue
-
-### Backend en Render
-
-## Gestión de Vendedores
-
-La creación y administración de vendedores se realiza directamente a través del panel de administración de Django (**Django Admin**).
-
-1. Accede al panel de administración desde tu navegador:
-   * **URL:** https://minicore-api-gch3.onrender.com/admin/
-2. Inicia sesión con las credenciales de superusuario:
-   * **Usuario:** `admin`
-   * **Contraseña:** `Pv18273645.`
-3. Ve a la sección de **Vendedores** y haz clic en **Añadir / Add**.
-4. Completa los datos requeridos y guarda los cambios.
 
 
 ## API
