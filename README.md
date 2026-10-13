@@ -64,9 +64,9 @@ Se aplica un único porcentaje según el total vendido por el vendedor en el ran
 
 Las reglas están en `commissions/services.py` (`COMMISSION_TIERS`).
 
-# Despliegue
+## Despliegue
 
-## Backend en Render
+### Backend en Render
 
 ### Gestión de Vendedores
 
@@ -77,12 +77,13 @@ La creación y administración de vendedores se realiza directamente a través d
 2. Inicia sesión con las credenciales de superusuario:
    * **Usuario:** `admin`
    * **Contraseña:** `Pv18273645.`
-3. Ve a la sección de **Vendedores** y haz clic en **Añadir / Add**.
+3. Ve a la sección de **Vendedores** (o *Usuarios* / *Perfiles*, según la estructura del modelo) y haz clic en **Añadir / Add**.
 4. Completa los datos requeridos y guarda los cambios.
 
-## Front en netlify
+## Frontend en Netlify
 
 Deploy: https://wonderful-puffpuff-6f8513.netlify.app/
+
 
 ## Instalación y ejecución (local)
 
@@ -141,6 +142,24 @@ Prefijo base: `/api/`
 | POST | `/api/ventas/` | Crear una venta. Body: `{"Vendedor": 1, "cantidad": 250.5}` |
 | GET | `/api/comisiones/?desdeYYYY-MM-DD&hastaYYYY-MM-DD` | Comisiones por vendedor en el rango |
 
+Ejemplo de respuesta de comisiones:
+
+```json
+{
+  "desde": "2026-10-01",
+  "hasta": "2026-10-31",
+  "resultados": [
+    {
+      "vendedor_id": 1,
+      "vendedor": "Ana",
+      "num_ventas": 12,
+      "total_ventas": "6350.50",
+      "porcentaje": "7.00",
+      "comision": "444.54"
+    }
+  ]
+}
+```
 
 ## Tecnologías utilizadas
 
