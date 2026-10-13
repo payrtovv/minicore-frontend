@@ -64,7 +64,7 @@ Se aplica un único porcentaje según el total vendido por el vendedor en el ran
 
 Las reglas están en `commissions/services.py` (`COMMISSION_TIERS`).
 
-## Instalación y ejecución
+## Instalación y ejecución (local)
 
 ### Requisitos previos
 
@@ -111,28 +111,22 @@ El frontend queda disponible en `http://localhost:5173/`. Rutas:
 - `/comisiones`: consultar comisiones por rango de fechas
 
 
-## Despliegue
+
+### Despliegue
 
 ### Backend en Render
 
-- **Build command:**
-  ```
-  pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
-  ```
-- **Start command:**
-  ```
-  gunicorn config.wsgi:application
-  ```
-- Crear una base PostgreSQL en Render (misma región) y pegar su *Internal Database URL* en `DATABASE_URL`.
+## Gestión de Vendedores
 
-### Frontend en Netlify
+La creación y administración de vendedores se realiza directamente a través del panel de administración de Django (**Django Admin**).
 
-- **Build command:** `npm run build`
-- **Publish directory:** `dist`
-- Archivo `public/_redirects` para que funcionen las rutas de React Router:
-  ```
-  /*    /index.html   200
-  ```
+1. Accede al panel de administración desde tu navegador:
+   * **URL:** https://minicore-api-gch3.onrender.com/admin/
+2. Inicia sesión con las credenciales de superusuario:
+   * **Usuario:** `admin`
+   * **Contraseña:** `Pv18273645.`
+3. Ve a la sección de **Vendedores** y haz clic en **Añadir / Add**.
+4. Completa los datos requeridos y guarda los cambios.
 
 
 ## API
@@ -145,24 +139,6 @@ Prefijo base: `/api/`
 | POST | `/api/ventas/` | Crear una venta. Body: `{"Vendedor": 1, "cantidad": 250.5}` |
 | GET | `/api/comisiones/?desdeYYYY-MM-DD&hastaYYYY-MM-DD` | Comisiones por vendedor en el rango |
 
-Ejemplo de respuesta de comisiones:
-
-```json
-{
-  "desde": "2026-10-01",
-  "hasta": "2026-10-31",
-  "resultados": [
-    {
-      "vendedor_id": 1,
-      "vendedor": "Ana",
-      "num_ventas": 12,
-      "total_ventas": "6350.50",
-      "porcentaje": "7.00",
-      "comision": "444.54"
-    }
-  ]
-}
-```
 
 ## Tecnologías utilizadas
 
